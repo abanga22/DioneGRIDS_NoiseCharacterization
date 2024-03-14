@@ -70,11 +70,11 @@ ylim([min(currentC3_nA) max(currentC3_nA)]);
 hold off;
 % Plot moving average of current levels on other channels
 figure(2);
-plot(taxis, movmean(currentC1_nA, (1/10)*size(currentC3_nA, 1)));
+plot(taxis, movmean(currentC1_nA, (1/10)*size(currentC3_nA, 1)), "LineWidth", 2);
 hold on;
-plot(taxis, movmean(currentC2_nA, (1/10)*size(currentC3_nA, 1)));
+plot(taxis, movmean(currentC2_nA, (1/10)*size(currentC3_nA, 1)), "LineWidth", 2);
 hold on;
-plot(taxis, movmean(currentC4_nA, (1/10)*size(currentC3_nA, 1)));
+plot(taxis, movmean(currentC4_nA, (1/10)*size(currentC3_nA, 1)), "LineWidth", 2);
 ax = gca;
 ax.FontSize = 15;
 grid on;
