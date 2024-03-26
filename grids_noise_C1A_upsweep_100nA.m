@@ -90,11 +90,11 @@ xlim([0 numSeconds]);
 hold off;
 
 %% Generate Time-Average Offset Data
-avg_offset_B = mean(currentC1_nA - currentC2_nA);
-avg_offset_C = mean(currentC1_nA - currentC3_nA);
-avg_offset_D = mean(currentC1_nA - currentC4_nA);
+avg_B = mean(currentC2_nA);
+avg_C = mean(currentC3_nA);
+avg_D = mean(currentC4_nA);
 
-disp("Offsets for 1 nA on Coll. A: ");
-disp(strcat("Collector B: ", string(avg_offset_B), " nA"));
-disp(strcat("Collector C: ", string(avg_offset_C), " nA"));
-disp(strcat("Collector D: ", string(avg_offset_D), " nA"));
+disp("Unstimulated collector currents for 100 nA on Coll. A: ");
+disp(strcat("Collector B: ", string(avg_B), " nA"));
+disp(strcat("Collector C: ", string(avg_C), " nA"));
+disp(strcat("Collector D: ", string(avg_D), " nA"));
