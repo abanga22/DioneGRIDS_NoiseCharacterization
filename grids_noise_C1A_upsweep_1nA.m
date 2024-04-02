@@ -99,3 +99,10 @@ disp("Unstimulated collector currents for 1 nA on Coll. A: ");
 disp(strcat("Collector B: ", string(avg_B), " nA"));
 disp(strcat("Collector C: ", string(avg_C), " nA"));
 disp(strcat("Collector D: ", string(avg_D), " nA"));
+
+%% Display variation currents
+minusTwoSigma = meanC1Current - 2*stdC1Current;
+plusTwoSigma = meanC1Current + 2*stdC1Current;
+disp(strcat("Mean Current (nA): ", num2str(meanC1Current)));
+disp(strcat("Minus 2*sigma (nA): ", num2str(minusTwoSigma)));
+disp(strcat("Plus 2*sigma (nA): ", num2str(plusTwoSigma)));
